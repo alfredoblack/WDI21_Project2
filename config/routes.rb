@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
   devise_for :users
+  
   root 'public#index'
 
   get '/public', to: 'public#index'
