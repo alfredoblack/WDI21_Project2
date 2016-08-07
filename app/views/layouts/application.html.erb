@@ -17,12 +17,8 @@
         <a class="navbar-brand" href="/public#index">
           <img alt="Brand" src="/londontown.jpg">
         </a>
-          <% if current_user %>
-            <%= current_user.username %>
-            <p>
-              <b>Image:</b>
-              <%= image_tag @user.profile_image.url %>
-            </p>
+          <% if current_user %><a href="/users/<%= current_user.id %>" class="nav-link">
+            <%= current_user.username %></a>
             <%= link_to "Log out", destroy_user_session_path, method: :delete %>
           <% else %>
              <%= link_to "Sign In", new_user_session_path %>
