@@ -1,3 +1,14 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  
+  root 'public#index'
+
+  get '/public', to: 'public#index'
+  get '/private', to: 'private#index'
+  get '/signed_in', to: 'private#signed_in'
+
+  # get 'public/index'
+
+  # get 'private/index'
+
+  # get 'private/signed_in'
 end
