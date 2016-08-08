@@ -2,9 +2,13 @@
   <div class="card-block">
     <h4 class="card-title"><%= user.username %></h4>
     <p class="card-text">
-   <%= link_to image_tag(@user.profile_image.thumb.url), @user.profile_image.url %></p>
+   <%= link_to image_tag(user.profile_image.thumb.url), user.profile_image.url %></p>
     <p class="card-text"><%= user.email %></p>
-    <p class="card-text"><%= user.events.map{ |x| x.title }.join (", ") %></p>
+    <p class="card-text">Events Attended <%= user.events.map{ |x| x.title }.join (", ") %></p>
+    <% user.events.each do |event| %>
+      <%= image_tag(event.event_image.url) %>
+    <% end %>
+    <!-- <p class="card-text"><%= image_tag user.events.map { |y| y.event_image.url } %></p> -->
     <p class="card-text"><small class="text-muted">Last updated <%= distance_of_time_in_words(Time.now, user.updated_at) %> ago</small></p>
   </div>
 </div>

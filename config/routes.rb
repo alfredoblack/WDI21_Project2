@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   
  
   resources :events
+
+
   root 'public#index'
 
   devise_for :users

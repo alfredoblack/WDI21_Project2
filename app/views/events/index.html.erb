@@ -18,6 +18,7 @@
       <tr>
         <td><%= event.title %></td>
         <td><%= event.location %></td>
+        <%= link_to image_tag(event.event_image.url), event.event_image.url %>
         <td><%= event.comment %></td>
         <td><%= event.user.username %></td>
         <td><%= link_to 'Show', event %></td>
