@@ -5,5 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   mount_uploader :profile_image, UserProfileUploader
-         
+  has_many :events       
 end

@@ -4,6 +4,7 @@
     <p class="card-text">
    <%= link_to image_tag(@user.profile_image.thumb.url), @user.profile_image.url %></p>
     <p class="card-text"><%= user.email %></p>
+    <p class="card-text"><%= user.events.map{ |x| x.title }.join (", ") %></p>
     <p class="card-text"><small class="text-muted">Last updated <%= distance_of_time_in_words(Time.now, user.updated_at) %> ago</small></p>
   </div>
 </div>
