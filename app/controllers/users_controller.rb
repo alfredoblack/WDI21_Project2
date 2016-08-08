@@ -8,17 +8,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
-  def edit
-  end
-
-  def update
-  end
-
-  def destroy
-  end
-
-
-  def user_params
+  def location_params
     params.require(:user).permit(:username, :profile_image)
   end
 end
