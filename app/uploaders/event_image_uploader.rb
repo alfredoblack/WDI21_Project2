@@ -32,12 +32,12 @@ class EventImageUploader < CarrierWave::Uploader::Base
   # end
 
   # Create different versions of your uploaded files:
-  version :thumb do
+  version :medium do
     process :resize_to_fit => [100, 100]
   end
 
-  version :detail do
-    process :resize_to_fit => [400, 400]
+  version :show do
+    process :resize_to_fill => [400, 400]
 
   end
 
