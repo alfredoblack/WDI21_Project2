@@ -5,7 +5,7 @@
   <% end %>
 
  
-        <%=@event.user.username %>
+        <%=@event.creator.username %>
      
           <%=@event.comment%>
 
@@ -13,6 +13,8 @@
 
           <% @event.attendees.each do |attendee| %>
           <p><%= attendee.first_name %></p>
+          <p><%= image_tag (attendee.profile_image.thumb.url) %></p>
+
           <% end %>
     
     </div>
@@ -27,7 +29,7 @@
   <% else %>
     <%= link_to "Leave Event", leave_event_path(@event), method: :delete %>
 
-    ## upload a photo button
+    
   <% end %>
 
   <%= link_to 'Edit', edit_event_path(@event) %> |

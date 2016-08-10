@@ -1,4 +1,28 @@
 
-<%= render @user %>
+<h1>Users Show Page here</h1>
+
+<div class="card">
+  <div class="card-block">
+    
+ 
+    <p class="card-text">Events created</p>
+    <% @user.events.each do |event| %>
+      <h4><%= link_to event.title, event %></h4>
+      <% event.event_images do |image| %>
+      <img src="<%= image_tag image %>">
+      <% end %>
+    <% end %> 
+
+    <p class="card-text">Events attending</p>
+    <% @user.events_attending.each do |event| %>
+      <h4><%= link_to event.title, event %></h4>
+      <%= image_tag event.event_images.first %>
+      <%= event.created_at.month%>
+      
+    <% end %> 
+
+    <p class="card-text"><small class="text-muted">Last updated <%= distance_of_time_in_words(Time.now, @user.updated_at) %> ago</small></p>
+  </div>
+</div>
 
 <%= link_to 'Back', users_path %>
