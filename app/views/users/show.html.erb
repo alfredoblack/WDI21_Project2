@@ -8,9 +8,7 @@
     <p class="card-text">Events created</p>
     <% @user.events.each do |event| %>
       <h4><%= link_to event.title, event %></h4>
-      <% event.event_images do |image| %>
-      <img src="<%= image_tag image %>">
-      <% end %>
+      <%= image_tag event.event_images.first %>
     <% end %> 
 
     <p class="card-text">Events attending</p>

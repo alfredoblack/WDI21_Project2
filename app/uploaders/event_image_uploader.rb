@@ -32,14 +32,15 @@ class EventImageUploader < CarrierWave::Uploader::Base
   # end
 
   # Create different versions of your uploaded files:
-  version :medium do
-    process :resize_to_fit => [100, 100]
+  version :index do
+    process :resize_to_fill => [222, 150]
   end
 
-  version :show do
-    process :resize_to_fill => [400, 400]
-
+  version :event_show do
+    process :resize_to_fill => [900, 500]
   end
+
+
 
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:

@@ -2,7 +2,7 @@
   <div class="card-block">
     <h4 class="card-title"><%= user.username %></h4>
     <p class="card-text">
-    <%= link_to image_tag(user.profile_image.thumb.url), user_path(user) %></p>
+    <%= link_to image_tag(user.profile_image.user_profile.url), user_path(user) %></p>
     <p class="card-text"><%= user.email %></p>
  
     <p class="card-text">Events created</p>
