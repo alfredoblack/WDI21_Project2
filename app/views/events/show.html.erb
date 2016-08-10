@@ -6,11 +6,8 @@
 
  
       <p>Event Creator:<%=@event.creator.username %></p>
-     
-          <%=@event.comment%>
-
+        <p><%=@event.comment%></p>
           <p> Total Attendees:<%=@event.attendees.count %></p>
-
           <% @event.attendees.each do |attendee| %>
           <p><%= attendee.first_name %></p>
           <img src="<%=(attendee.profile_image.user_comment.url) %>" alt="..." class="img-circle">

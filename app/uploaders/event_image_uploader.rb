@@ -36,6 +36,10 @@ class EventImageUploader < CarrierWave::Uploader::Base
     process :resize_to_fill => [222, 150]
   end
 
+  version :indexs do
+    process :resize_to_fill => [160, 160]
+  end
+
   version :event_show do
     process :resize_to_fill => [900, 500]
   end

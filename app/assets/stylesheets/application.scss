@@ -1,2 +1,27 @@
 @import 'bootstrap';
 @import 'public';
+
+body{
+  background: lightblue;
+}
+
+.bold{
+  font-size: 30px;
+}
+
+.nav-item{
+  font-family: 'Martel', serif;
+}
+
+h1 {
+  font-family: 'Rye', cursive;
+}
+
+.subtitle{
+  font-family: 'Stint Ultra Condensed', cursive;
+  font-size: 30px;
+}
+
+.footer{
+  border: 1px solid green;
+}
