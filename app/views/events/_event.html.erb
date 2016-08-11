@@ -1,12 +1,9 @@
-  <!-- <div class="col-xs-6 col-sm-3"> -->
-  <div class="col-md-4">
-    <div class="card-block">
-      <img src="<%=(event.event_images.first.index) %>" alt="..." class="img-rounded">
+  <div class="col-md-3">
+      <img src="<%=(event.event_images.first.trial) %>" alt="..." class="img-thumbnail">
       <div class="card-block">
         <h4 class="card-title"><%= link_to event.title, event %></h4>
-        <p class="card-text"><%= event.location %></p>
       </div>
-    </div>
+    
   </div>
 
 

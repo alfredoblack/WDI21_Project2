@@ -6,20 +6,21 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <link href="https://fonts.googleapis.com/css?family=Rye|Stint+Ultra+Condensed" rel="stylesheet">
+  
+    <link href="https://fonts.googleapis.com/css?family=Rye|Stint+Ultra+Condensed|Tulpen+One" rel="stylesheet">
 
   </head>
 
   <body>
     <%= render "header" %>
-    <main class="container">
+
+    <main class="container page-wrapper">
       <%= render "alerts" %>
       <%= yield %>
     </main>
+
       <%= render "footer" %>
 
-    
-    
   </body>
 </html>
 
