@@ -283,8 +283,89 @@ e11 = Event.create!(
   title: "Tech Summit",
   location: "North London",
   event_images: [open("./db/images/larrypagelondon.jpg"), open("./db/images/sherylslondon.jpg")],
-  user_id: u15.id
+  user_id: u1.id
   )
 
 e11.save!
+
+e12 = Event.create!(
+  title: "Drinks with the girls",
+  location: "West London",
+  event_images: [open("./db/images/techcity2.jpeg"), open("./db/images/glasscity.jpg")],
+  user_id: u1.id
+  )
+
+e12.save!
+
+e13 = Event.create!(
+  title: "G7",
+  location: "Central London",
+  event_images: [open("./db/images/parliment.jpg"), open("./db/images/dcQueen.jpg")],
+  user_id: u1.id
+  )
+
+e13.save!
+
+e14 = Event.create!(
+  title: "Tech Summit",
+  location: "North London",
+  event_images: [open("./db/images/larrypagelondon.jpg"), open("./db/images/sherylslondon.jpg")],
+  user_id: u1.id
+  )
+
+e14.save!
+
+e15 = Event.create!(
+  title: "Tech Summit",
+  location: "North London",
+  event_images: [open("./db/images/larrypagelondon.jpg"), open("./db/images/sherylslondon.jpg")],
+  user_id: u1.id
+  )
+
+e15.save!
+
+e16 = Event.create!(
+  title: "Tech Summit",
+  location: "North London",
+  event_images: [open("./db/images/larrypagelondon.jpg"), open("./db/images/sherylslondon.jpg")],
+  user_id: u1.id
+  )
+
+e16.save!
+
+e17 = Event.create!(
+  title: "Puttin on the Ritz",
+  location: "West London",
+  event_images: [open("./db/images/larrypagelondon.jpg"), open("./db/images/sherylslondon.jpg")],
+  user_id: u1.id
+  )
+
+e17.save!
+
+e18 = Event.create!(
+  title: "Rio",
+  location: "North London",
+  event_images: [open("./db/images/rio.jpg"), open("./db/images/sherylslondon.jpg")],
+  user_id: u1.id
+  )
+
+e18.save!
+
+e19 = Event.create!(
+  title: "Hanging with Liz",
+  location: "North London",
+  event_images: [open("./db/images/bo.jpg"), open("./db/images/jack_ma.jpg")],
+  user_id: u1.id
+  )
+
+e19.save!
+
+e20 = Event.create!(
+  title: "Runners World",
+  location: "North London",
+  event_images: [open("./db/images/running_event.jpg"), open("./db/images/climbing.jpg")],
+  user_id: u1.id
+  )
+
+e20.save!
 

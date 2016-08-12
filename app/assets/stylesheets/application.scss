@@ -124,6 +124,7 @@ li {
     float: left;
     color: black;
     font-family: 'Tulpen One', cursive;
+    padding-bottom: 0;
 }
 
 
@@ -285,6 +286,8 @@ h3{
   float: left;
 }
 .mastersmall{
+  height: 650px;
+  padding-top: 150px;
 }
 //side clickers front page
 @-webkit-keyframes fadeInUpBig {
