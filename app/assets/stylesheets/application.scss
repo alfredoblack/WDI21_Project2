@@ -3,6 +3,7 @@
 
 body{
   background: url("jump.jpg");
+  // center top no-repeat
   background-repeat: no-repeat;
   background: cover;
   background-attachment: fixed;
@@ -286,8 +287,8 @@ h3{
   float: left;
 }
 .mastersmall{
-  height: 650px;
-  padding-top: 150px;
+  height: 580px;
+  padding-top: 80px;
 }
 //side clickers front page
 @-webkit-keyframes fadeInUpBig {

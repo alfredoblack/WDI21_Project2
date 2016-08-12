@@ -244,9 +244,9 @@ e6 = Event.create!(
 e6.save!
 
 e7 = Event.create!(
-  title: "Tech City London",
+  title: "London Fashion Week",
   location: "East London",
-  event_images: [open("./db/images/larrypagelondon.jpg"), open("./db/images/sherylslondon.jpg")],
+  event_images: [open("./db/images/fashion13.jpg"), open("./db/images/sherylslondon.jpg")],
   user_id: u15.id
   )
 
@@ -271,18 +271,18 @@ e9 = Event.create!(
 e9.save!
 
 e10 = Event.create!(
-  title: "Microsoft",
-  location: "North London",
-  event_images: [open("./db/images/larrypagelondon.jpg"), open("./db/images/sherylslondon.jpg")],
+  title: "Breakfast Crew",
+  location: "London",
+  event_images: [open("./db/images/breakfast.jpg"), open("./db/images/sherylslondon.jpg")],
   user_id: u15.id
   )
 
 e10.save!
 
 e11 = Event.create!(
-  title: "Tech Summit",
+  title: "Lean In Book review",
   location: "North London",
-  event_images: [open("./db/images/larrypagelondon.jpg"), open("./db/images/sherylslondon.jpg")],
+  event_images: [open("./db/images/sheryl_sandberg.jpg"), open("./db/images/sherylslondon.jpg")],
   user_id: u1.id
   )
 
@@ -316,18 +316,18 @@ e14 = Event.create!(
 e14.save!
 
 e15 = Event.create!(
-  title: "Tech Summit",
+  title: "New York in London",
   location: "North London",
-  event_images: [open("./db/images/larrypagelondon.jpg"), open("./db/images/sherylslondon.jpg")],
+  event_images: [open("./db/images/newyork.jpg"), open("./db/images/sherylslondon.jpg")],
   user_id: u1.id
   )
 
 e15.save!
 
 e16 = Event.create!(
-  title: "Tech Summit",
+  title: "Coffee With Hillary",
   location: "North London",
-  event_images: [open("./db/images/larrypagelondon.jpg"), open("./db/images/sherylslondon.jpg")],
+  event_images: [open("./db/images/hillary_clinton"), open("./db/images/newyork.jpg")],
   user_id: u1.id
   )
 
@@ -336,7 +336,7 @@ e16.save!
 e17 = Event.create!(
   title: "Puttin on the Ritz",
   location: "West London",
-  event_images: [open("./db/images/larrypagelondon.jpg"), open("./db/images/sherylslondon.jpg")],
+  event_images: [open("./db/images/vogue_event.jpg"), open("./db/images/sherylslondon.jpg")],
   user_id: u1.id
   )
 

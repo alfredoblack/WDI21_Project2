@@ -29,6 +29,7 @@ class EventsController < ApplicationController
 
   def create
     @event = current_user.events.new(event_params)
+    @event.event_images = params[:event][:event_images]
 
     respond_to do |format|
       if @event.save
