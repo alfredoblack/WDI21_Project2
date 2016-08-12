@@ -1,8 +1,22 @@
-<h1>Private#index</h1>
-<p>Find me in app/views/private/index.html.erb</p>
-<% current_user.events_attending.each do |event| %>
-<%= event.title%>
+<h1>What Up <%= current_user.first_name %> </h1>
+<h3>check out what you have going on...</h3>
 
-<% end %>
+<div class="container bottom">
+  <h2>Events Attending</h2>
+  <div class="row">
+    <% current_user.events_attending.each do |event| %>
+      <div class="col-md-3">
+        <div class="hovereffect">
+           <img src="<%= event.event_images.first.trial %>" alt="..."> 
+           <div class="overlay">
+             <h2><%=event.title%></h2>
+             <a class="info" href="/events/:id">Enter</a>
+          </div>
+          </div>      
+        </div>
+      <% end %>
+  </div> 
+</div>
+
 
 
