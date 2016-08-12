@@ -44,21 +44,20 @@ class EventsController < ApplicationController
 
 
   def update
+    image_array = @event.event_images
 
-    # image_array = @event.event_images
+    if params[:images_to_delete]
+      params[:images_to_delete].each do |index|
+        deleted_image = image_array.delete_at(index.to_i)
+        deleted_image.try(:remove!)
+      end
+    end
 
-    #   if params[:images_to_delete]
-    #     params[:images_to_delete].each do |index|
-    #       deleted_image = image_array.delete_at(index.to_i)
-    #       deleted_image.try(:remove!)
-    #     end
-    #   end
+    if params[:event][:event_images].present?
+      image_array += params[:event][:event_images]
+    end
 
-    #   if params[:event][:event_images].present?
-    #     image_array += params[:event][:event_images]
-    #   end
-
-    # @event.event_images = image_array
+    @event.event_images = image_array
 
     respond_to do |format|
       if @event.update(event_params)
@@ -89,6 +88,6 @@ class EventsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
-      params.require(:event).permit(:title, :location, :comment, :user_id, :creator, {event_images: []})
+      params.require(:event).permit(:title, :location, :comment, :user_id, :creator)
     end
 end

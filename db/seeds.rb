@@ -270,4 +270,21 @@ e9 = Event.create!(
 
 e9.save!
 
+e10 = Event.create!(
+  title: "Microsoft",
+  location: "North London",
+  event_images: [open("./db/images/larrypagelondon.jpg"), open("./db/images/sherylslondon.jpg")],
+  user_id: u15.id
+  )
+
+e10.save!
+
+e11 = Event.create!(
+  title: "Tech Summit",
+  location: "North London",
+  event_images: [open("./db/images/larrypagelondon.jpg"), open("./db/images/sherylslondon.jpg")],
+  user_id: u15.id
+  )
+
+e11.save!
 

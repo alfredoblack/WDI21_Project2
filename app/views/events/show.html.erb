@@ -1,29 +1,31 @@
  <h1><%=@event.title%></h1>
  <div class="container showevent">
     <div class="container angie">
-      <%= image_tag @event.creator.profile_image.tiny_comment%>
+      <%= image_tag @event.creator.profile_image.user_comment%>
       </div>
 
       <div class="container angiesays">
-        <p>Event Creator:<%=@event.creator.first_name %>  <%=@event.creator.last_name%></p>
+        <h3>Event Creator : <%=@event.creator.first_name %>  <%=@event.creator.last_name%></h3>
+        <div class="headtitles">Location <%= @event.location%></div>
+        <% if !current_user.events_attending.include?(@event) %>
+          <div class="headtitles"><%= link_to "Attend Event", attend_event_path(@event), method: :post %></div>
+        <% else %>
+        <div class="headtitles"> Status: You are attending this event</div>
+          <%= link_to "Leave Event", leave_event_path(@event), method: :delete %>
+
+          
+        <% end %>
         </div>
 
 
   </div>
   
-    <% if !current_user.events_attending.include?(@event) %>
-      <%= link_to "Attend Event", attend_event_path(@event), method: :post %>
-    <% else %>
-    <p>You are attending this event</p>
-      <%= link_to "Leave Event", leave_event_path(@event), method: :delete %>
-
-      
-    <% end %>
+   
 
   <p><%=@event.comment%></p>
           
 
-<div class="container trump"> 
+<div class="container trump col-md-10 col-md-offset-1"> 
   <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -55,6 +57,7 @@
   </div>
 
 </div> 
+
 
   <p> Total Attendees:<%=@event.attendees.count %></p>
   <% @event.attendees.each do |attendee| %>

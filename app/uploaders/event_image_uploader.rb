@@ -45,8 +45,9 @@ class EventImageUploader < CarrierWave::Uploader::Base
   end
 
   version :trial do
-    process :resize_to_fill => [300, 300]
+    process :resize_to_fill => [350, 200]
   end
+
 
 
 

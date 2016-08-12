@@ -1,76 +1,53 @@
-
 <!-- <div class="jumbotron jumbotron-fluid"> -->
-  <div class="card">
+
+<div class="card">
   <div class="card-block">
+    <p><%= @user.first_name%> <%= @user.last_name%></p>
     <h1 class="display-3"><%= image_tag current_user.profile_image.user_comment%></h1>
-    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+      <%= link_to "Edit My Profile", edit_user_registration_path %>
+      <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
   </div>
 </div>
-</div> 
+
+
+
+<div class="container middle">
+  <h2>Events Created</h2>
+  <div class="row">
+    <% @user.events.each do |event| %>
+      <div class="col-md-3">
+        <div class="hovereffect">
+          <img class="img-responsive" src="<%= event.event_images.first.trial %>" alt="">
+           <div class="overlay">
+             <h2><%=event.title%></h2>
+             <a class="info" href="/">Enter</a>
+          </div>
+          </div>      
+        </div>
+      <% end %>
+  </div> 
 </div>
 
-<div class="card card-inverse">
-  <img class="card-img" src="http://www.fillmurray.com/300/300" alt="Card image">
-  <div class="card-img-overlay">
-    <h4 class="card-title">Card title</h4>
-    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-  </div>
-    <img class="card-img" src="http://www.fillmurray.com/300/300" alt="Card image">
-    <div class="card-img-overlay">
-      <h4 class="card-title">Card title</h4>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
+<div class="container bottom">
+  <h2>Events Attending</h2>
+  <div class="row">
+    <% @user.events_attending.each do |event| %>
+      <div class="col-md-3">
+        <div class="hovereffect">
+           <img src="<%= event.event_images.first.trial %>" alt="..."> 
+           <div class="overlay">
+             <h2><%=event.title%></h2>
+             <a class="info" href="/events/:id">Enter</a>
+          </div>
+          </div>      
+        </div>
+      <% end %>
+  </div> 
 </div>
 
 
-  <div class="card">
-    <div class="card-block">
-      <div class="col-md-4">
-        <p class="card-text bold">Events created</p>
+ 
 
-      <% @user.events.each do |event| %>
-        <h4><%= link_to event.title, event %></h4>
-        <img src="<%= event.event_images.first.indexs %>" alt="..." class="img-circle">
-        <% end %> 
-        </div>
-      </div>  
-   </div> 
+      
 
-   <div class="card">
-   <div class="card-block">
-   <p class="card-text bold">Events attending</p>
-   <div class="row">
-      <% @user.events_attending.each do |event| %>
-        <div class="col-md-4">
-          <h4><%= link_to event.title, event %></h4>
-           <img src="<%= event.event_images.first.indexs %>" alt="..." class="img-circle"> 
-             <h6 id="month"><%= event.created_at.month%></h6>
-        </div>
-      <% end %> 
-    </div>
-    </div>
-    </div>
-
-<!--     <div class="card">
-      <div class="card-block">
-        <div class="col-md-4">
-          <p class="card-text bold">Events attending</p>
-
-            <%# @user.events_attending.each do |event| %>
-              <h4><%#= link_to event.title, event %></h4>
-              <img src="<%#= event.event_images.first.indexs %>" alt="..." class="img-circle">
-            
-            
-            <%#= event.created_at.month%>
-        
-            <#% end %> 
-
-   
-      </div> -->
-<!--   </div>
- -->
- <p class="card-text"><small class="text-muted">Last updated <%= distance_of_time_in_words(Time.now, @user.updated_at) %> ago</small></p>
-
-<%= link_to 'Back', users_path %>
+     

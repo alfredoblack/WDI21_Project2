@@ -18,10 +18,11 @@
 
   <div class="field">
     <%= f.label :event_images %><br />
-    <%event.event_images.each.with_index do |image, index|%>
-    <%= image_tag(image.trial.url) %>
-    <%= check_box_tag 'images_to_deleted[]', index %> Delete?
+    <% event.event_images.each.with_index do |image, index|%>
+      <%= image_tag(image.trial.url) %>
+      <%= check_box_tag 'images_to_delete[]', index %> Delete?
     <% end %>
+
     <%= f.file_field :event_images, multiple: true %>
   </div>
 
