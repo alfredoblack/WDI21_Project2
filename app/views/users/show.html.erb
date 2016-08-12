@@ -2,10 +2,9 @@
 
 <div class="card">
   <div class="card-block">
-    <p><%= @user.first_name%> <%= @user.last_name%></p>
+    <div class="dp"><%= @user.first_name%> <%= @user.last_name%></div>
     <h1 class="display-3"><%= image_tag current_user.profile_image.user_comment%></h1>
       <%= link_to "Edit My Profile", edit_user_registration_path %>
-      <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
   </div>
 </div>
 
